@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Fix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link id="appIcon" rel="icon" href="../assets/icon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="with-titlebar">
+  <header class="titlebar pywebview-drag-region">
+    <div class="brand pywebview-drag-region">
+      <img class="brand-mark pywebview-drag-region" src="../assets/icon.svg" alt="" aria-hidden="true">
+      <span id="titleText" class="pywebview-drag-region">Pixel Fix</span>
+    </div>
+    <div class="window-controls">
+      <button id="minimizeBtn" class="window-button" type="button">-</button>
+      <button id="closeBtn" class="window-button close" type="button">x</button>
+    </div>
+  </header>
+
+  <main class="app">
+    <section class="hero">
+      <h1>Transparent Pixel Repair</h1>
+      <p>Batch-fix sprite edges with accelerated nearest-color filling.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-title">Source Directory</div>
+      <div class="row">
+        <input id="directoryInput" type="text" placeholder="Choose a folder or drop images here">
+        <button id="browseBtn" class="button primary" type="button">Browse</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">Processing</div>
+      <div class="row">
+        <label><input id="recursiveInput" type="checkbox"> Search subfolders recursively</label>
+      </div>
+      <div class="row thread-row">
+        <div id="threadLabel" class="thread-label">Threads</div>
+        <input id="threadInput" type="range" min="1" max="1" value="1">
+      </div>
+    </section>
+
+    <section class="card list-card">
+      <div class="list-head">
+        <span>Images Found</span>
+        <div class="list-actions">
+          <span id="countText">No images loaded</span>
+          <button id="clearBtn" class="button ghost small" type="button" disabled>Clear</button>
+        </div>
+      </div>
+      <div id="imageList" class="list"></div>
+    </section>
+
+    <section class="progress-wrap">
+      <progress id="progress" value="0" max="1"></progress>
+      <button id="startBtn" class="button primary" type="button">Start</button>
+      <button id="cancelBtn" class="button danger" type="button" disabled>Cancel</button>
+    </section>
+
+    <section id="statusText" class="status">Select a folder to begin.</section>
+  </main>
+
+  <div class="drop-overlay">
+    <div class="drop-target">
+      <div class="drop-ring"></div>
+      <div class="drop-core"><div class="drop-arrow">↓</div></div>
+      <div class="drop-copy">
+        <strong>Drop to import</strong>
+        <span>Images or folders will be loaded into the processing queue</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
