@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Pixel Fix</h1>
-  <a href="https://github.com/nyaridev/pixel-fix/releases">
+  <a href="https://github.com/nyaridev/pixel-fix/releases/download/v1.0.0/pixel-fix.exe">
     <img src="https://img.shields.io/badge/1.0.0-release-2ea44f" alt="1.0.0 release">
   </a>
 </div>
