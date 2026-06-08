@@ -1,4 +1,9 @@
-# Pixel Fix
+<div align="center">
+  <h1>Pixel Fix</h1>
+  <a href="https://github.com/nyaridev/pixel-fix/releases">
+    <img src="https://img.shields.io/badge/version-1.0.0-black" alt="Version 1.0.0">
+  </a>
+</div>
 
 Tool to batch-fix transparent pixel edges in sprites and images.
 
